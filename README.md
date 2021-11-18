@@ -180,7 +180,7 @@ Element|Descripció
 //resultat/codiResultat|Codi de resultat de l’operació de consulta: 0: El ciutadà consta al Registre Central d'assegurats, 1: El ciutadà NO consta al Registre Central d'assegurats, 0502: Error realitzant la consulta.
 //resultat/descripcio|Descripció del resultat.
 
-**(INTRODUCIR IMAGEN)**
+![Resposta dades específiques](https://github.com/ConsorciAOC/VO-RCA/blob/main/images/3.2.2%20Resposta%20%E2%80%93%20dades%20espec%C3%ADfiques.png)
 
 ## 4 Joc de proves
 Podeu demanar el joc de proves del servei proporcionat per l’emissor final, vàlid per a l’entorn de preproducció, a l’adreça **suport.integracio@aoc.cat**. 
