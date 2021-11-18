@@ -62,3 +62,125 @@ Cal tenir en compte que:
 Aquesta modalitat permet consultar les dades d’un assegurat a partir del CIP, de les dades personals o del document identificador.
 
 #### 3.1.1 Petició – dades específiques 
+
+| Element | Descripció |
+|---|---|
+| /peticioConsultaAssegurat/codiIdentificacioPersonal | Bloc de dades per informar les dades d’identificació personal del titular.  |
+| //codiIdentificacioPersonal/CIP | CIP |
+| /peticioConsultaAssegurat/dadesPersonals | Bloc de dades per informar les dades personals del titular. |
+| //dadesPersonals/nom | Nom. |
+| //dadesPersonals/primerCognom | Primer cognom. |
+| //dadesPersonals/segonCognom | Obligatori si el titular té segon cognom. En cas de no tenir-ne (p.e.estranger) no s’ha d’informar. |
+| //dadesPersonals/dataNaixement | Format DDMMYYYY. |
+| /dadesPersonals/sexe | Sexe (0: home 1: dona). |
+| /peticioConsultaAssegurat/documentIdentificador | Bloc de dades per informar el document identificador del titular. |
+| //documentIdentificador/tipusDocumentacio | Tipus de documentació: DNI / NIF, Passaport, Targeta de residència comunitària, Permís de residència i treball, Documents varis i NIE |
+| //documentIdentificador/documentacio  | Documentació. |
+
+**(INTRODUCIR IMAGEN)**
+
+#### 3.1.2 Resposta – dades específiques
+De l’schema associat a la resposta especifica, el servei informa les dades que es detallen a continuació.
+
+**(INTRODUCIR IMAGEN)**
+
+| Element | Descripció |
+|---|---|
+| /respostaConsultaAssegurat/peticioConsultaAssegurat | Bloc de dades de la consulta (vegeu apartat anterior). |
+| /respostaConsultaAssegurat/resposta | Bloc de dades corresponent a la resposta. |
+| //resposta/CIPVigent | CIP actiu de l’assegurat. |
+| //resposta/situacioAssegurat | Situació de l’assegurat: alta, defunció, trasllat i fusió |
+| //resposta/adreca/nomLocalitat | Nom de localitat. |
+| //resposta/adreca/codiLocalitat | Codi de localitat (INE). |
+| //resposta/adreca/districtePostal | Districte postal. |
+| //resposta/adreca/nomVia | Nom de la via. |
+| //resposta/adreca/numeroViaInicial | Número de via. |
+| //resposta/adreca/numeroViaFinal | Número de via. |
+| //resposta/adreca/tipusVia | Codi de tipus de via (vegeu apartat 3.1.2.2). |
+| //resposta/adreca/indicadorBis | Indicador BIS. |
+| //resposta/adreca/pis | Pis. |
+| //resposta/adreca/porta | Porta. |
+| //resposta/adreca/escala | Escala. |
+| //resposta/adreca/quilometre  | Quilometre. |
+| //resposta/dadesPersonals/nom | Nom. |
+| //resposta/dadesPersonals/primerCognom | Primer cognom. |
+| //resposta/dadesPersonals/segonCognom | Segon cognom. |
+| //resposta/dadesPersonals/sexe | Sexe (0: home 1: dona). |
+| //resposta/documentIdentificador/tipusDocumentacio | Tipus de documentació: DNI / NIF, Passaport, Targeta de residència comunitària, Permís de residència i treball, Documents varis i NIE |
+| //resposta/documentIdentificador/documentacio | Documentació. |
+| //resposta/dadesCobertura/codiNivellCobertura | **1:** COB. SANITÀRIA GENERAL FARM. GRAT., **3:** COBERTURA SANITÀRIA GENERAL, **4:** COB. SANIT. GRAL. EXCEPTE FARMÀCIA, **7:** E. COL. COB. COMUNA FARM. GRAT., **8:** E. COL. COB. COMUNA, **9:** PROGRAMES INTERÈS SANITARI DS, **11:** COB.SANITÀRIA PAMEM FARMÀCIA GRATUITA i **12:** COB.SANITÀRIA PAMEM FARMÀCIA PARCIAL |
+| //resposta/dadesCobertura/descripcioNivellCobertura | Descripció nivell de cobertura. |
+| //resultat/codiResultat | Codi de resultat de l’operació de consulta (vegeu apartat 3.1.2.1). |
+| //resultat/descripcio | Descripció. |
+
+##### 3.1.2.1 Codis de resultat
+* 0: El ciutadà consta al Registre Central d'assegurats.
+* 1: El ciutadà NO consta al Registre Central d'assegurats.
+* 2: Múltiples respostes trobades amb els criteris de cerca introduïts. Milloreu la cerca.
+* 0502: Error realitzant la consulta.
+
+##### 3.1.2.2 Tipus de via
+Codi|Descripció
+:-----:|:-----:
+AV|AVINGUDA
+BL|BLOCS
+BR|BARRI
+BX|BAIXADA
+CM|CAMI
+CN|CANN
+CO|CARRERÓ
+CR|CARRERÓ
+CS|COSTA
+CT|CARRETERA
+DA|DAVALLADA
+DI|DISSEMINAT
+DR|DRECERA
+ES|ESCALES
+GL|GLORIETA
+GR|GRUPS
+GV|GRAN VIA
+JA|JARDI
+LL|LLOC
+MO|MOLL
+MS|MASS
+PA|PAS
+PC|PLACETA
+PD|PARTIDA
+PG|PASSATGE
+PI|PASSADIS
+PJ|PUJADA
+PL|PLAÇA
+PO|POLIGON
+PR|PARC
+PS|PASSEIG
+PT|PONT
+PY|PLATJA
+RB|RAMBLA
+
+### 3.2 Verificació d’assegurats (RCA_VERIFICACIO)
+Aquesta modalitat permet verifcar les dades d’un assegurat.
+
+#### 3.2.1 Petició – dades específiques
+Element|Descripció
+-----|-----
+/peticioVerificacioAssegurat/CIP| CIP.
+/peticioVerificacioAssegurat/primerCognom| Primer cognom. 
+
+**(INTRODUCIR IMAGEN)**
+
+#### 3.2.2 Resposta – dades específiques
+De l’schema associat a la resposta especifica, el servei informa les dades que es detallen a continuació.
+
+Element|Descripció
+-----|-----
+/respostaVerificacioAssegurat/ peticioVerificacioAssegurat|Bloc de dades de la consulta (vegeu apartat anterior).
+/respostaVerificacioAssegurat/resposta|Bloc de dades corresponent a la resposta.
+//resposta/CIPVigent|CIP actiu de l’assegurat.
+//resposta/situacioAssegurat |Situació de l’assegurat: A: alta, D: defunció, T: trasllat, F: fusió
+//resultat/codiResultat|Codi de resultat de l’operació de consulta: 0: El ciutadà consta al Registre Central d'assegurats, 1: El ciutadà NO consta al Registre Central d'assegurats, 0502: Error realitzant la consulta.
+//resultat/descripcio|Descripció del resultat.
+
+**(INTRODUCIR IMAGEN)**
+
+## 4 Joc de proves
+Podeu demanar el joc de proves del servei proporcionat per l’emissor final, vàlid per a l’entorn de preproducció, a l’adreça **suport.integracio@aoc.cat**. 
