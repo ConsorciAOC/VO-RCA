@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<peticioConsultaAssegurat xmlns="http://www.aocat.net/rca">
+	<codiIdentificacioPersonal>
+		<CIP>String</CIP>
+	</codiIdentificacioPersonal>
+</peticioConsultaAssegurat>

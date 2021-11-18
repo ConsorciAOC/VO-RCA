@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<respostaVerificacioAssegurat xmlns="http://www.aocat.net/rca">
+	<peticioVerificacioAssegurat>
+		<CIP>String</CIP>
+		<primerCognom>String</primerCognom>
+	</peticioVerificacioAssegurat>
+	<resposta>
+		<CIPVigent>String</CIPVigent>
+		<situacioAssegurat>String</situacioAssegurat>
+	</resposta>
+	<resultat>
+		<codiResultat>String</codiResultat>
+		<descripcio>String</descripcio>
+	</resultat>
+</respostaVerificacioAssegurat>
