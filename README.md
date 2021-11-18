@@ -18,7 +18,7 @@ Totes les consultes del producte tenen disponible la versió imprimible del resu
 ## 3- Missatgeria dels serveis
 Aquest servei permet consultar i verificar la identitat de menors. Per aquesta identificació, el servei consulta el RCA que emmagatzema les dades personals per a la gestió de les targetes sanitàries individuals (TSI).
 
-**(INTRODUCIR IMAGEN)**
+![Tarjeta TSI](https://github.com/ConsorciAOC/VO-RCA/blob/main/images/3%20Missatgeria%20dels%20serveis.png)
 
 La TSI és el document que permet als ciutadans l’accés als centres, als serveis i a les prestacions del sistema sanitari públic. A més a més, la TSI facilita la identificació de forma ràpida i correcta a través del Codi d’Identificació Personal (CIP) que està imprès a la primera línia. El CIP és el conjunt de regles (expressades amb nombres i lletres) que de forma individual i unívoca permet identificar a cada persona assegurada del CatSalut.
 El CIP sanitari està compost de 14 dígits:
@@ -77,12 +77,12 @@ Aquesta modalitat permet consultar les dades d’un assegurat a partir del CIP, 
 | //documentIdentificador/tipusDocumentacio | Tipus de documentació: DNI / NIF, Passaport, Targeta de residència comunitària, Permís de residència i treball, Documents varis i NIE |
 | //documentIdentificador/documentacio  | Documentació. |
 
-**(INTRODUCIR IMAGEN)**
+![dades específiques](https://github.com/ConsorciAOC/VO-RCA/blob/main/images/3.1.1%20Petici%C3%B3%20%E2%80%93%20dades%20espec%C3%ADfiques.png)
 
 #### 3.1.2 Resposta – dades específiques
 De l’schema associat a la resposta especifica, el servei informa les dades que es detallen a continuació.
 
-**(INTRODUCIR IMAGEN)**
+![Resposta dades específiques](https://github.com/ConsorciAOC/VO-RCA/blob/main/images/3.1.2%20Resposta%20%E2%80%93%20dades%20espec%C3%ADfiques.png)
 
 | Element | Descripció |
 |---|---|
@@ -166,7 +166,7 @@ Element|Descripció
 /peticioVerificacioAssegurat/CIP| CIP.
 /peticioVerificacioAssegurat/primerCognom| Primer cognom. 
 
-**(INTRODUCIR IMAGEN)**
+![Resposta dades específiques](https://github.com/ConsorciAOC/VO-RCA/blob/main/images/3.2.1%20Petici%C3%B3%20%E2%80%93%20dades%20espec%C3%ADfiques.png)
 
 #### 3.2.2 Resposta – dades específiques
 De l’schema associat a la resposta especifica, el servei informa les dades que es detallen a continuació.
