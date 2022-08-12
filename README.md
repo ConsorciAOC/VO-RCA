@@ -1,10 +1,27 @@
 # VO-RCA
 
-## 1- Introducció
-Aquest document detalla la missatgeria associada al servei de consulta del Registre Central d’Assegurats de CatSalut (en endavant RCA). Per poder realitzar la integració cal conèixer prèviament la següent documentació:
-* Document d’Especificació de missatgeria pel consum de productes de la plataforma PCI del Consorci AOC. 
+## INDEX
 
-## 2- Transmissions de dades disponibles
+- [1. Introducció](#1)
+- [2. Transmissions de dades disponibles](#2)
+- [3. Missatgeria del servei](#3)
+   * [3.1 Consulta d’assegurats (RCA_CONSULTA)](#3.1)
+        * [3.1.1 Petició – dades específiques ](#3.1.1)
+		* [3.1.2 Resposta – dades específiques](#3.1.2)
+   * [3.2 Verificació d’assegurats (RCA_VERIFICACIO)](#3.2)
+        * [3.2.1 Petició – dades específiques](#3.2.1)
+		* [3.2.2 Resposta – dades específiques](#3.2.2)
+ -  [4. Joc de proves](#4)
+   
+
+## 1- Introducció <a name="1"></a>
+Aquest document detalla la missatgeria associada al servei de consulta del Registre Central d’Assegurats de CatSalut (en endavant RCA). Per poder realitzar la integració cal conèixer prèviament la següent documentació:
+
+- [Document de Missatgeria Genèrica de la PCI del Consorci AOC.][PCI]
+ 
+[PCI]:https://github.com/ConsorciAOC/PCI 
+
+## 2- Transmissions de dades disponibles <a name="2"></a>
 Les dades disponibles a través del servei són les que es presenten a continuació: 
 * Emissor: Servei Català de la Salut
 
@@ -15,7 +32,7 @@ Les dades disponibles a través del servei són les que es presenten a continuac
 
 Totes les consultes del producte tenen disponible la versió imprimible del resultat de la consulta en format PDF. Per més detalls adreceu-vos a l’apartat Extensions de missatgeria del document de missatgeria genèrica.
 
-## 3- Missatgeria dels serveis
+## 3- Missatgeria del servei <a name="3"></a>
 Aquest servei permet consultar i verificar la identitat de menors. Per aquesta identificació, el servei consulta el RCA que emmagatzema les dades personals per a la gestió de les targetes sanitàries individuals (TSI).
 
 ![Tarjeta TSI](https://github.com/ConsorciAOC/VO-RCA/blob/main/images/3%20Missatgeria%20dels%20serveis.png)
@@ -58,10 +75,10 @@ Cal tenir en compte que:
 * Únicament un CIP pot estar actiu per ciutadà.
 * Tots els CIP associats a un individu estant enregistrats al RCA encara que no estiguin actius.
 
-### 3.1 Consulta d’assegurats (RCA_CONSULTA)
+### 3.1 Consulta d’assegurats (RCA_CONSULTA) <a name="3.1"></a>
 Aquesta modalitat permet consultar les dades d’un assegurat a partir del CIP, de les dades personals o del document identificador.
 
-#### 3.1.1 Petició – dades específiques 
+#### 3.1.1 Petició – dades específiques  <a name="3.1.1"></a>
 
 | Element | Descripció |
 |---|---|
@@ -79,7 +96,7 @@ Aquesta modalitat permet consultar les dades d’un assegurat a partir del CIP, 
 
 ![dades específiques](https://github.com/ConsorciAOC/VO-RCA/blob/main/images/3.1.1%20Petici%C3%B3%20%E2%80%93%20dades%20espec%C3%ADfiques.png)
 
-#### 3.1.2 Resposta – dades específiques
+#### 3.1.2 Resposta – dades específiques <a name="3.1.2"></a>
 De l’schema associat a la resposta especifica, el servei informa les dades que es detallen a continuació.
 
 ![Resposta dades específiques](https://github.com/ConsorciAOC/VO-RCA/blob/main/images/3.1.2%20Resposta%20%E2%80%93%20dades%20espec%C3%ADfiques.png)
@@ -157,10 +174,10 @@ PT|PONT
 PY|PLATJA
 RB|RAMBLA
 
-### 3.2 Verificació d’assegurats (RCA_VERIFICACIO)
+### 3.2 Verificació d’assegurats (RCA_VERIFICACIO) <a name="3.2"></a>
 Aquesta modalitat permet verifcar les dades d’un assegurat.
 
-#### 3.2.1 Petició – dades específiques
+#### 3.2.1 Petició – dades específiques  <a name="3.2.1"></a>
 Element|Descripció
 -----|-----
 /peticioVerificacioAssegurat/CIP| CIP.
@@ -168,7 +185,7 @@ Element|Descripció
 
 ![Resposta dades específiques](https://github.com/ConsorciAOC/VO-RCA/blob/main/images/3.2.1%20Petici%C3%B3%20%E2%80%93%20dades%20espec%C3%ADfiques.png)
 
-#### 3.2.2 Resposta – dades específiques
+#### 3.2.2 Resposta – dades específiques <a name="3.2.2"></a>
 De l’schema associat a la resposta especifica, el servei informa les dades que es detallen a continuació.
 
 Element|Descripció
@@ -182,5 +199,5 @@ Element|Descripció
 
 ![Resposta dades específiques](https://github.com/ConsorciAOC/VO-RCA/blob/main/images/3.2.2%20Resposta%20%E2%80%93%20dades%20espec%C3%ADfiques.png)
 
-## 4 Joc de proves
+## 4 Joc de proves <a name="4"></a>
 Podeu demanar el joc de proves del servei proporcionat per l’emissor final, vàlid per a l’entorn de preproducció, a l’adreça **suport.integracio@aoc.cat**. 
